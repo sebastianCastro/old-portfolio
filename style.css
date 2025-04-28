@@ -1,0 +1,103 @@
+html {
+    font-family: Calibri, sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2
+}
+
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul.menuItems {
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.menuItems a {
+    text-decoration: none;
+    padding: 1em;
+    color: #444
+}
+
+.hr-lines{
+  position: relative;
+  text-align: center; 
+}
+
+.hr-lines:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 15%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #444;
+}
+
+.hr-lines:after{
+    content:" ";
+    height: 2px;
+    width: 15%;
+    background: #444;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+img{
+    height: 200px;
+    border-radius: 2%;
+}
+
+.introText {
+    padding: 5%;
+}
+
+.skills p {
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/* .skills a:visited {
+    text-decoration: line-through;
+} */
+
+@media screen and (max-width: 575px) {
+    img {   
+      display: none;
+    }
+
+    .hr-lines::before{
+        display: none;
+    }
+
+    .hr-lines::after{
+        display: none;
+    }
+}

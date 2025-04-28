@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Sebastian</title>
+</head>
+
+<header>
+  <nav class="hr-lines">
+    <ul class="menuItems">
+      <li><a href='index.html' data-item='Home'>Home</a></li>
+      <li><a href='SebastianCastroResume.pdf' data-item='Resume' download>Resume</a></li>
+      <li><a href='skills.html' data-item='Skills'>Skills</a></li>
+      <li><a href='contact.html' data-item='Contact'>Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+  <!-- START HERE -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Style The Contact Form How Ever You Prefer -->
+  <link rel="stylesheet" href="contact.css">
+  
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbxnsJzsq0r_v2jfWPM_iRJ-y1PnOdTLmeQKO2ctpK_Zan6oVPyEyJdzZ74f2J_pn5MF/exec">
+  <!-- change the form action to your script url -->
+  
+  <div class="form-elements">
+     <h1 class="pure-group">Get in touch!</h1>
+     <fieldset class="pure-group">
+       <label for="name">Name: </label>
+       <input id="name" name="name" placeholder="" />
+     </fieldset>
+
+     <fieldset class="pure-group">
+       <label for="message">Message: </label>
+       <textarea id="message" name="message" rows="5"
+       placeholder=""></textarea>
+     </fieldset>
+
+     <fieldset class="pure-group">
+       <label for="email">Email Address:</label>
+       <input id="email" name="email" type="email" value=""
+       required placeholder=""/>
+     </fieldset>
+
+     <!-- <fieldset class="pure-group">
+       <label for="color">Favourite Color: </label>
+       <input id="color" name="color" placeholder="green" />
+     </fieldset> -->
+
+     <fieldset class="pure-group honeypot-field">
+       <label for="honeypot">To help avoid spam, utilize a Honeypot technique with a hidden text field; must be empty to submit the form! Otherwise, we assume the user is a spam bot.</label>
+       <input id="honeypot" type="text" name="honeypot" value="" />
+     </fieldset>
+
+     <button class="button-success pure-button button-xlarge">
+       <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+   </div>
+
+   <!-- Customise the Thankyou Message People See when they submit the form: -->
+   <div class="thankyou_message" style="display:none;">
+     <h2><em>Thanks</em> for the email!
+       I will get back to you soon!</h2>
+   </div>
+
+ </form>
+
+ <!-- Submit the Form to Google Using "AJAX" -->
+ <script data-cfasync="false" src="form-submission-handler.js"></script>
+<!-- END -->
+</body>
+
+</html>

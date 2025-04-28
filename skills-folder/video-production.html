@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="designs.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <title>Video Production</title>
+</head>
+<header>
+    <nav class="hr-lines">
+      <ul class="menuItems">
+        <li><a href='/index.html' data-item='Home'>Home</a></li>
+        <li><a href='/SebastianCastroResume.pdf' data-item='Resume' download>Resume</a></li>
+        <li><a href='/skills.html' data-item='Skills'>Skills</a></li>
+        <li><a href='/contact.html' data-item='Contact'>Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body oncontextmenu="return false;">
+    <h1>Video Editing Gallery</h1>
+    <!-- <p>Made with Adobe Premier. </p> -->
+    <div class="my-slider">
+      <div><video src="/videos/lee.mp4" style="height: 100%; width:100%" controls></video></div>
+      <div><video src="/videos/xiaohu.mp4" style="height: 100%; width:100%" controls></video></div>
+      <div><video id="lowerVolume" src="/videos/road-trip.mp4" style="height: 100%; width:100%" controls volume="0.5"></video></div>
+      <div><video id="lowerVolume" src="/videos/juggle.mp4" style="height: 100%; width:100%" controls></video></div>
+    </div>
+    <div id="controls">
+      <button type="button" class="button previous" onclick="pauseVideos()">
+        <span class="button__icon button_back">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </span>
+        <span class="button__text">Back</span>
+      </button>
+      <button type="button" class="button next" onclick="pauseVideos()">
+        <span class="button__text">Next</span>
+        <span class="button__icon button_forward">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </span>
+      </button>
+    </div>
+    <a href="/skills.html"><p><ion-icon name="return-down-back-outline"></ion-icon> Go back to the <b>skills</b> section.</p></a>
+
+    <script>
+        let slider = tns({
+            container: '.my-slider',
+            items: 1,
+            center: true,
+            loop: true,
+            swipeAngle: false,
+            speed: 400,
+            controlsPosition: top,
+            nav: false,
+            controls: true,
+            controlsContainer: '#controls',
+            prevButton: '.previous',
+            nextButton: '.next',
+        });
+    </script>
+    <script>
+      function pauseVideos() {
+        document.querySelectorAll('video').forEach(vid => vid.pause());
+      }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>    
+</html>

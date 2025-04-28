@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="front-end.css"/>
+  <title>Front-End Dev</title>
+</head>
+
+<header>
+  <nav class="hr-lines">
+    <ul class="menuItems">
+      <li><a href='/index.html' data-item='Home'>Home</a></li>
+      <li><a href='/SebastianCastroResume.pdf' data-item='Resume' download>Resume</a></li>
+      <li><a href='/skills.html' data-item='Skills'>Skills</a></li>
+      <li><a href='/contact.html' data-item='Contact'>Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<body>
+  <h1>Front-end Gallery</h1>
+  <h3>I'm a self-taught front-end developer from <u><a href="https://www.theodinproject.com" target="_blank">The Odin Project.</u></a></h3>
+  <p>Websites made with plain HTML, CSS, and Javascript. <em style="font-size: 10px;">This website was also made with these.</em></p>
+  <div id="gallery">
+    <a href="https://eduardo.castrojordan.com/" target="_blank"><img src="/images/front-end-projects/pm-portfolio.png"></a>
+    <a href="https://sebastiancastro.github.io/etch-a-sketch/" target="_blank"><img src="/images/front-end-projects/etch-a-sketch.png"></a>
+    <a href="https://sebastiancastro.github.io/rock-paper-scissors/" target="_blank"><img src="/images/front-end-projects/rock-paper-scissors.png"></a>
+    <a href="https://sebastiancastro.github.io/calculator/" target="_blank"><img src="/images/front-end-projects/calculator.png"></a>
+    <a href="https://sebastiancastro.github.io/google-homepage/" target="_blank"><img src="/images/front-end-projects/google-copy.png"></a>
+   
+    <h3>Some interesting challenges in the making of this website</h3>
+    <p><b>Contact Form</b></p>
+    <p>
+      This website was created entirely without a back-end. 
+      So you might be wondering how does a website with no back-end 
+      is able to process a contact form, and to that I say, thanks to  <a href="https://github.com/dwyl/learn-to-send-email-via-google-script-html-no-server" target="_blank"><u>this</u></a> Github repository, 
+      I found a way around it. Instead of using a server to send email, it uses Google to send email on your behalf and Google Spreadsheets to keep track of the data.
+    </p>
+    <p>
+      The Google spreadsheet looks like this. <br>
+      It records the time the contact form was submitted, the user's name, the message, and the user's email.
+    </p>
+    <img src="/images/contact-form.png" alt="A screenshot from Google's spreadsheet displaying contact-form data">
+    <p>
+      Every email I receive is from my personal email to myself. <br>
+      And this is how the email I receive looks.
+    </p>
+    <img src="/images/contact-mail.png" alt="A screenshot form Gmail on how does the email look like">
+    <p><b>Video Editing Gallery</b></p>
+    <p>
+      Another challenge I faced while creating this site was creating the video gallery. 
+      At first, I planned on just doing a page with one video after the other in a column format, 
+      but that didn't look as clean as I wanted it to look, so I looked into carousels while looking for other ways to showcase my videos.
+      A carousel is a small representation of visual elements that allows you to cycle through them.
+      Two black frames with the word "video" in them can be seen in the image below. 
+      These are the other videos that are part of the carousel but are hidden from view until you click the "prev" or "next" button.
+    </p>
+    <img src="/images/video-page.png" alt="A screenshot frem this website's video gallery">
+    <p>
+      However, achieving this was not easy; I tried it myself but failed to make it look as I wanted. 
+      Then, while doing more research, I came across <a href="https://github.com/ganlanyuan/tiny-slider" target="_blank"><u>this</u></a> other Github repository. 
+      This repository enabled me to create a beautiful responsive carousel slider with very few steps.
+    </p>
+    <p>
+      Then, while testing the carousel, I noticed that if you play a video and then go to either the previous or next video, 
+      the sound from the previous video would continue to play, so I had to add my own script on each button that awaits for a click, 
+      and once you've clicked on either button, the script pauses all videos, allowing you to play the next video without the noise from the previous video.
+    </p>
+    <p><b>Certificates Page</b></p>
+    <p>
+      The last challenge I faced was figuring out how to display all of my certificates within the same iframe element. 
+      Someone online suggested that I create an HTML file with all of the iframes I needed for each certificate and 
+      display them full size in that file. Then, from the certificates page, I could use another iframe element that uses that HTML file as a source, allowing you to scroll down through my certificates. <br>
+      When I was finished, I liked how it looked, but mostly because it took me a long time to get it that way, not because it looked good. 
+      Initially, the PDFs had a grey bar between them, as seen in the image below on the left side, and it was pretty inconsistent with different screen sizes.
+    </p>
+    <img src="/images/certs.png" alt="A screenshot from this website's certificatios section">
+    <p>
+      But then it occurred to me that I didn't need my certificates in pdf format; I could convert them to any other format 
+      and display them that way. I'd also be able to compress the image files, making them load much faster. 
+      On the right side of the image, we can see how it looks now that I'm using photos instead of PDFs.
+    </p>
+    <p>
+      Also, don't judge me for not incorporating the certificate photos into a single page, 
+      as I did with this one. At least, this allows me to demonstrate other methods of displaying content.
+    </p>
+  </div>
+  <a href="/skills.html"><p><ion-icon name="return-down-back-outline"></ion-icon> Go back to the <b>skills</b> section.</p></a>
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
